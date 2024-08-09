@@ -1,0 +1,18 @@
+digraph "./bin/x86/main; 599397 B" {
+node [width=0.375,height=0.25];
+Legend [shape=box,fontsize=24,shape=plaintext,label="./bin/x86/main\lTotal B: 599397\lFocusing on: 599397\lDropped nodes with <= 2996 abs(B)\lDropped edges with <= 599 B\l"];
+N1 [label="__libc_start_main\n0 (0.0%)\rof 484034 (80.8%)\r",shape=box,fontsize=8.0];
+N2 [label="_start\n0 (0.0%)\rof 484034 (80.8%)\r",shape=box,fontsize=8.0];
+N3 [label="ex_alloc\n484034 (80.8%)\r",shape=box,fontsize=52.9];
+N4 [label="main\n0 (0.0%)\rof 484034 (80.8%)\r",shape=box,fontsize=8.0];
+N5 [label="_GLOBAL__sub_I_eh_alloc.cc\n0 (0.0%)\rof 115363 (19.2%)\r",shape=box,fontsize=8.0];
+N6 [label="_GLOBAL__sub_I_eh_alloc.cc\n(inline)\n115363 (19.2%)\r",shape=box,fontsize=29.9];
+N7 [label="__do_global_ctors_aux\n0 (0.0%)\rof 115363 (19.2%)\r",shape=box,fontsize=8.0];
+N8 [label="__static_initialization_and_destruction_0\n(inline)\n0 (0.0%)\rof 115363 (19.2%)\r",shape=box,fontsize=8.0];
+N2 -> N1 [label=484034, weight=9537, style="setlinewidth(2.000000)"];
+N1 -> N4 [label=484034, weight=9537, style="setlinewidth(2.000000)"];
+N4 -> N3 [label=484034, weight=9537, style="setlinewidth(2.000000)"];
+N7 -> N5 [label=115363, weight=3494, style="setlinewidth(1.154790)"];
+N8 -> N6 [label=115363, weight=3494, style="setlinewidth(1.154790),dashed"];
+N5 -> N8 [label=115363, weight=3494, style="setlinewidth(1.154790),dashed"];
+}

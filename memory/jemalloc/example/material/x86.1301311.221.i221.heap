@@ -1,0 +1,59 @@
+heap_v2/65536
+  t*: 7: 233203 [0: 0]
+  t0: 7: 233203 [0: 0]
+  t1: 0: 0 [0: 0]
+@ 0x478fbe 0x479610 0x46cd70 0x41fc38 0x418ffd 0x41918a 0x7f664cf913d5 0x418eea
+  t*: 4: 112998 [0: 0]
+  t0: 4: 112998 [0: 0]
+@ 0x478fbe 0x479610 0x46cd70 0x41fc38 0x418ffd 0x4191d7 0x7f664cf913d5 0x418eea
+  t*: 2: 56499 [0: 0]
+  t0: 2: 56499 [0: 0]
+@ 0x478fbe 0x479610 0x46cd70 0x420557 0x7f664d5e13f6 0x7f664d697962
+  t*: 1: 82704 [0: 0]
+  t0: 1: 82704 [0: 0]
+
+MAPPED_LIBRARIES:
+00400000-004a9000 r-xp 00000000 fd:06 88631138                           /home/411634/900_welter/open-tool-master/memory/jemalloc/example/bin/x86/main
+006a8000-006a9000 r--p 000a8000 fd:06 88631138                           /home/411634/900_welter/open-tool-master/memory/jemalloc/example/bin/x86/main
+006a9000-006aa000 rw-p 000a9000 fd:06 88631138                           /home/411634/900_welter/open-tool-master/memory/jemalloc/example/bin/x86/main
+006aa000-008c9000 rw-p 00000000 00:00 0 
+7f664b800000-7f664bc00000 rw-p 00000000 00:00 0 
+7f664bdff000-7f664be00000 ---p 00000000 00:00 0 
+7f664be00000-7f664c600000 rw-p 00000000 00:00 0 
+7f664c600000-7f664ce00000 rw-p 00000000 00:00 0 
+7f664cf6f000-7f664d131000 r-xp 00000000 00:122 66197844                  /usr/lib64/libc-2.17.so
+7f664d131000-7f664d331000 ---p 001c2000 00:122 66197844                  /usr/lib64/libc-2.17.so
+7f664d331000-7f664d335000 r--p 001c2000 00:122 66197844                  /usr/lib64/libc-2.17.so
+7f664d335000-7f664d337000 rw-p 001c6000 00:122 66197844                  /usr/lib64/libc-2.17.so
+7f664d337000-7f664d33c000 rw-p 00000000 00:00 0 
+7f664d33c000-7f664d353000 r-xp 00000000 fd:06 89080204                   /home/411634/tool/gcc/gcc-8.5.0/lib64/libgcc_s.so.1
+7f664d353000-7f664d552000 ---p 00017000 fd:06 89080204                   /home/411634/tool/gcc/gcc-8.5.0/lib64/libgcc_s.so.1
+7f664d552000-7f664d553000 rw-p 00016000 fd:06 89080204                   /home/411634/tool/gcc/gcc-8.5.0/lib64/libgcc_s.so.1
+7f664d553000-7f664d6db000 r-xp 00000000 fd:06 89080239                   /home/411634/tool/gcc/gcc-8.5.0/lib64/libstdc++.so.6.0.25
+7f664d6db000-7f664d8da000 ---p 00188000 fd:06 89080239                   /home/411634/tool/gcc/gcc-8.5.0/lib64/libstdc++.so.6.0.25
+7f664d8da000-7f664d8e5000 r--p 00187000 fd:06 89080239                   /home/411634/tool/gcc/gcc-8.5.0/lib64/libstdc++.so.6.0.25
+7f664d8e5000-7f664d8e7000 rw-p 00192000 fd:06 89080239                   /home/411634/tool/gcc/gcc-8.5.0/lib64/libstdc++.so.6.0.25
+7f664d8e7000-7f664d8eb000 rw-p 00000000 00:00 0 
+7f664d8eb000-7f664d9ec000 r-xp 00000000 00:122 66197999                  /usr/lib64/libm-2.17.so
+7f664d9ec000-7f664dbeb000 ---p 00101000 00:122 66197999                  /usr/lib64/libm-2.17.so
+7f664dbeb000-7f664dbec000 r--p 00100000 00:122 66197999                  /usr/lib64/libm-2.17.so
+7f664dbec000-7f664dbed000 rw-p 00101000 00:122 66197999                  /usr/lib64/libm-2.17.so
+7f664dbed000-7f664dbef000 r-xp 00000000 00:122 66197871                  /usr/lib64/libdl-2.17.so
+7f664dbef000-7f664ddef000 ---p 00002000 00:122 66197871                  /usr/lib64/libdl-2.17.so
+7f664ddef000-7f664ddf0000 r--p 00002000 00:122 66197871                  /usr/lib64/libdl-2.17.so
+7f664ddf0000-7f664ddf1000 rw-p 00003000 00:122 66197871                  /usr/lib64/libdl-2.17.so
+7f664ddf1000-7f664de08000 r-xp 00000000 00:122 66198064                  /usr/lib64/libpthread-2.17.so
+7f664de08000-7f664e007000 ---p 00017000 00:122 66198064                  /usr/lib64/libpthread-2.17.so
+7f664e007000-7f664e008000 r--p 00016000 00:122 66198064                  /usr/lib64/libpthread-2.17.so
+7f664e008000-7f664e009000 rw-p 00017000 00:122 66198064                  /usr/lib64/libpthread-2.17.so
+7f664e009000-7f664e00d000 rw-p 00000000 00:00 0 
+7f664e00d000-7f664e02f000 r-xp 00000000 00:122 66197767                  /usr/lib64/ld-2.17.so
+7f664e20c000-7f664e213000 rw-p 00000000 00:00 0 
+7f664e22c000-7f664e22e000 rw-p 00000000 00:00 0 
+7f664e22e000-7f664e22f000 r--p 00021000 00:122 66197767                  /usr/lib64/ld-2.17.so
+7f664e22f000-7f664e230000 rw-p 00022000 00:122 66197767                  /usr/lib64/ld-2.17.so
+7f664e230000-7f664e231000 rw-p 00000000 00:00 0 
+7ffdb304d000-7ffdb3071000 rw-p 00000000 00:00 0                          [stack]
+7ffdb3158000-7ffdb315b000 r--p 00000000 00:00 0                          [vvar]
+7ffdb315b000-7ffdb315c000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 --xp 00000000 00:00 0                  [vsyscall]

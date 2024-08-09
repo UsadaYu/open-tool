@@ -1,0 +1,9 @@
+Total: 196035 B
+       0   0.0%   0.0%   115363  58.8% _GLOBAL__sub_I_eh_alloc.cc
+  115363  58.8%  58.8%   115363  58.8% _GLOBAL__sub_I_eh_alloc.cc (inline)
+       0   0.0%  58.8%   115363  58.8% __do_global_ctors_aux
+       0   0.0%  58.8%   115363  58.8% __static_initialization_and_destruction_0 (inline)
+       0   0.0%  58.8%    80672  41.2% __libc_start_main
+       0   0.0%  58.8%    80672  41.2% _start
+   80672  41.2% 100.0%    80672  41.2% ex_alloc
+       0   0.0% 100.0%    80672  41.2% main
