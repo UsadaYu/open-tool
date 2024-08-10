@@ -2,20 +2,19 @@
  * @brief   此用例中，进程运行完毕结束，这种情况下使用jemalloc定位内存问题会相对容易
  * 
  * @details
- * (1)  make clean
- *      make plat=x86 process_type=exit -B
- */
-        // mkdir -p -m 777 ./heap && rm -rf ./heap/*
+ * (1)  编译文件：
+        make clean
+        make plat=x86 process_type=exit -B
+ */     // mkdir -p -m 777 ./heap && rm -rf ./heap/*
  /*
- * 
  * (2)  要使用jemalloc统计内存，需要配置环境变量，这里有两种配置方式。
  *          方法1：在外部配置环境变量，即：
- *      export MALLOC_CONF=\
- *      prof:true,prof_leak:true,lg_prof_sample:0,prof_final:true,prof_prefix:./heap/x86
+        export MALLOC_CONF=\
+        prof:true,prof_leak:true,lg_prof_sample:0,prof_final:true,prof_prefix:./heap/x86
  *          方法2：在代码内配置环境变量，在代码中定义名为malloc_conf的全局字符串，
  *          jemalloc会读取这个字符串作为环境变量。
- *          const char *malloc_conf = \
- *      "prof:true,prof_leak:true,lg_prof_sample:0,prof_final:true,prof_prefix:./heap/x86"
+            const char *malloc_conf = \
+            "prof:true,prof_leak:true,lg_prof_sample:0,prof_final:true,prof_prefix:./heap/x86"
  * 
  * (3)  上述环境变量中：
  *      prof:true           开启后，剖析进程的内存申请操作

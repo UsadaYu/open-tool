@@ -3,14 +3,14 @@
  *          因为进程不会退出，故MALLOC_CONF选项中的prof_final参数不起作用
  * 
  * @details
- * (1)  make clean
- *      make plat=x86 process_type=not_exit -B
- */
-        // mkdir -p -m 777 ./heap && rm -rf ./heap/*
+ * (1)  编译文件：
+        make clean
+        make plat=x86 process_type=not_exit -B
+ */     // mkdir -p -m 777 ./heap && rm -rf ./heap/*
  /*
  * (2)  不退出的进程配置的环境变量与退出的进程稍有不同，一般如下：
- *      export MALLOC_CONF=\
- *      prof:true,prof_leak:true,lg_prof_interval:18,lg_prof_sample:16,prof_prefix:./heap/x86
+        export MALLOC_CONF=\
+        prof:true,prof_leak:true,lg_prof_interval:18,lg_prof_sample:16,prof_prefix:./heap/x86
  * 
  * (3)  上述环境变量中：
  *      prof:true           开启后，剖析进程的内存申请操作
