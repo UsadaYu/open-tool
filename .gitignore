@@ -15,6 +15,6 @@ __pycache__
 *.o
 *.gcno
 *.gcda
-*.docx
+
 # python file
 *.spec
