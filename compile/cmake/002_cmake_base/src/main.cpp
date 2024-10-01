@@ -1,6 +1,3 @@
-#include <stdio.h>
-#include <iostream>
-#include <typeinfo>
 #include "common.h"
 
 int main() {

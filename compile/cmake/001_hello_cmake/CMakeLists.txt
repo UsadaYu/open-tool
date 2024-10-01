@@ -25,8 +25,8 @@ cmake \
     (1) 默认，编译，等同于 --target all
 cmake --build ./build
 
-    (2) 默认编译
-cmake --build ./build --target all
+    (2) 多线程编译
+cmake --build ./build --target all -- -j8
 
     (3) 编译，并打印详细编译信息
 cmake --build ./build -- VERBOSE=1

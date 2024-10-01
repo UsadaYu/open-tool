@@ -21,6 +21,11 @@
 # 使用 `link_directories` 指定静态库 A 的头文件路径即可编译通过，这里不多赘述。
 # 本工程演示如何使用 `CMAKE_AR` 命令将多个静态库相合并。
 # 在 unix 中，`CMAKE_AR` 可以为 ar(gnuc)，llvm-ar 等
+
+# 因为 cmake 本质上是一个跨平台的构建工具，
+# 但使用 `CMAKE_AR` 和 `CMAKE_LINKER` 这些到自定义命令中，
+# 一些参数跨平台后会不支持，如 gnu、llvm 链接器中的 ld 命令：ld -r -o 这种写法，
+# 跨平台后可能不再适用，所以这种操作还是不在 cmake 脚本中进行为好，这里仅作演示
 ##############################################################################
 
 cmake_minimum_required(VERSION 3.10)
@@ -37,10 +42,12 @@ project(
 set(_src_dir ${PROJECT_SOURCE_DIR}/src)
 set(_target ar_demo)
 
-if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU" OR
+    CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
     add_compile_options(-fPIE)
 else()
-    message(FATAL_ERROR "only gnuc supported")
+    message(FATAL_ERROR
+        "unsupported compiler: ${CMAKE_CXX_COMPILER_ID}")
 endif()
 
 # header files
@@ -66,7 +73,10 @@ set(_target_path ${_target_dir}/lib${_target}.a)
 add_library(${_target} OBJECT ${_src_list})
 add_custom_command (
     OUTPUT label_ar
-    COMMAND ${CMAKE_AR} crsT ${_target_path} $<TARGET_OBJECTS:${_target}> ${_static_libs}
+    COMMAND ${CMAKE_LINKER} -r -o
+        ${PROJECT_BINARY_DIR}/lib${_target}_tmp.o $<TARGET_OBJECTS:${_target}> ${_static_libs}
+    COMMAND ${CMAKE_AR} crsT
+        ${_target_path} ${PROJECT_BINARY_DIR}/lib${_target}_tmp.o
     DEPENDS label_target_dir_cr ${_target}
 )
 

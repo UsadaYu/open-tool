@@ -1,6 +1,12 @@
 #ifndef __COMMON_H__
 #define __COMMON_H__
 
+#include <stdio.h>
+
+#ifdef __cplusplus
+#include <iostream>
+#endif // __cplusplus
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -16,6 +22,7 @@ extern "C" {
 }
 #endif
 
+#ifdef __cplusplus
 #define CXX_INFO() \
     do { \
         std::cout << \
@@ -30,6 +37,7 @@ extern "C" {
         std::cout << "Type "#var": " << \
         typeid(var).name() << std::endl; \
     } while(0);
+#endif // __cplusplus
 
 #ifdef __cplusplus
 extern "C" {
@@ -44,10 +52,12 @@ void fun_c2();
 }
 #endif
 
+#ifdef __cplusplus
 /**
  * @brief C++函数声明
  */
 void fun_cxx1();
 void fun_cxx2();
+#endif // __cplusplus
 
 #endif // __COMMON_H__

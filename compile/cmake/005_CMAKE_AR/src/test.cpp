@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include <iostream>
 #include "common.h"
 
 int func_test()

@@ -1,4 +1,3 @@
-#include <iostream>
 #include "common.h"
 
 void fun_cxx2()
